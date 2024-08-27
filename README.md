@@ -23,7 +23,7 @@ and the API at `https://mysite.ddev.site:8108/health`.
 Public API access:
 
 - Port: `8108`
-- Host: `{{DDEV_HOSTNAME}}`
+- Host: `{{DDEV_HOSTNAME}}` // replace with your actual DDEV hostname
 - Protocol: `https`
 - Search API key: `ddev`
 

@@ -2,7 +2,7 @@ name: typesense
 
 project_files:
   - docker-compose.typesense.yaml
-  - typesense/admin-config.json
+  - typesense/dashboard-config.json
 
 post_install_actions:
-  - sed -i "s/DDEV_HOSTNAME/$DDEV_HOSTNAME/g" typesense/admin-config.json
+  - sed -i "s/DDEV_HOSTNAME/$DDEV_HOSTNAME/g" typesense/dashboard-config.json
