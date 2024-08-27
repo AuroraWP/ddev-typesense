@@ -1,0 +1,10 @@
+{
+  "apiKey": "ddev",
+  "node": {
+    "host": "DDEV_HOSTNAME",
+    "port": "8108",
+    "protocol": "https",
+    "path": "",
+    "tls": true
+  }
+}
