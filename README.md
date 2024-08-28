@@ -1,4 +1,4 @@
-[![tests](https://github.com/AuroraWP/ddev-typesense/actions/workflows/tests.yml/badge.svg)](https://github.com/AuroraWP/ddev-typesense/actions/workflows/tests.yml)
+[![tests](https://github.com/AuroraWP/ddev-typesense/actions/workflows/test.yml/badge.svg)](https://github.com/AuroraWP/ddev-typesense/actions/workflows/test.yml)
 
 # ddev-typesense
 
