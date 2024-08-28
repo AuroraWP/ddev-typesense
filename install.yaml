@@ -15,6 +15,10 @@ post_install_actions:
     fi
   - |
     #ddev-description:typesense dashboard configuration
-    sed -i "s/DDEV_HOSTNAME/$DDEV_HOSTNAME/g" "typesense/dashboard-config.json"
+    if [ "$(uname -s)" == "Darwin" ]; then
+      sed -i .bak "s/DDEV_HOSTNAME/$DDEV_HOSTNAME/g" "typesense/dashboard-config.json"
+    else
+      sed -i "s/DDEV_HOSTNAME/$DDEV_HOSTNAME/g" "typesense/dashboard-config.json"
+    fi
   - echo "Typesense will be available at https://$DDEV_HOSTNAME:8108/health"
   - echo "Typesense dashboard will be available at http://typesense.$DDEV_HOSTNAME:8109/#/login"
