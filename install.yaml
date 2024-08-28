@@ -3,6 +3,18 @@ name: typesense
 project_files:
   - docker-compose.typesense.yaml
   - typesense/dashboard-config.json
+  - typesense/wp-typesense.php
 
 post_install_actions:
-  - sed -i "s/DDEV_HOSTNAME/$DDEV_HOSTNAME/g" typesense/dashboard-config.json
+  - |
+    #ddev-description:typesense configuration
+    if [ "$DDEV_PROJECT_TYPE" == "wordpress" ]; then
+      echo "Setting up typesense for WordPress..."  
+      mkdir -p ../wp-content/mu-plugins
+      cp typesense/wp-typesense.php ../wp-content/mu-plugins/typesense.php
+    fi
+  - |
+    #ddev-description:typesense dashboard configuration
+    sed -i "s/DDEV_HOSTNAME/$DDEV_HOSTNAME/g" "typesense/dashboard-config.json"
+  - echo "Typesense will be available at https://$DDEV_HOSTNAME:8108/health"
+  - echo "Typesense dashboard will be available at http://typesense.$DDEV_HOSTNAME:8109/#/login"

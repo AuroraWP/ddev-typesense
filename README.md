@@ -12,10 +12,10 @@ project using just `ddev get AuroraWP/ddev-typesense`.
 
 ## Usage
 
-Once installed, you can access the [typesense dashboard](https://github.com/bfritscher/typesense-dashboard) at `https://typesense.{{DDEV_HOSTNAME}}:8109/#/login`
+Once installed, you can access the [typesense dashboard](https://github.com/bfritscher/typesense-dashboard) at `http://typesense.{{DDEV_HOSTNAME}}:8109/#/login`
 and the typesense API at `https://{{DDEV_HOSTNAME}}:8108/health`.
 
-So if your site is `mysite.ddev.site`, you would access the dashboard at https://typesense.mysite.ddev.site:8109/#/login
+So if your site is `mysite.ddev.site`, you would access the dashboard at http://typesense.mysite.ddev.site:8109/#/login
 and the API at https://mysite.ddev.site:8108/health.
 
 ## Configuration

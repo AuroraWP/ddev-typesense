@@ -1,4 +1,5 @@
 {
+  "": "#ddev-generated",
   "apiKey": "ddev",
   "node": {
     "host": "DDEV_HOSTNAME",
